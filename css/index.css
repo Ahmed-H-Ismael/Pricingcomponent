@@ -1,0 +1,158 @@
+:root{
+    --very-LightGrayishBlue-color:hsl(240, 78%, 98%);
+    --LightGrayishBlue-color:hsl(234, 14%, 74%);
+    --GrayishBlue-color:hsl(233, 13%, 49%);
+    --Dark-GrayishBlue-color:hsl(232, 13%, 33%);
+    --Linear-Gradient: linear-gradient(to bottom, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    --main-color: hsl(237, 63%, 64%)
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--very-LightGrayishBlue-color);
+    font-family: "Montserrat", serif;
+    position: relative;
+    height: 90vh;
+}
+.bg{
+    position: absolute;
+    width: 20%;
+    z-index: -1;
+}
+.bg-top{
+    top:0;
+    right:0;
+}
+.bg-bottom{
+    bottom:0;
+    left:0;
+}
+.container{
+    width: 992px;
+    max-width: 100%;
+    margin: 3rem auto 0;
+}
+.header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.header h2{
+    color: var(--GrayishBlue-color);
+}
+.price-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-form{   
+    margin: 0 1rem;
+}
+.header input{
+    display: none;
+}
+.header label{
+    cursor: pointer; 
+}
+.header .new-checkbox{
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: var(--LightGrayishBlue-color);
+    position: relative;
+
+}
+.header .new-checkbox::after{
+    position: absolute;
+    content: "";
+    top: 2px;
+    right: 5px;
+    width: 45%;
+    height: 85%;
+    background-color: var(--very-LightGrayishBlue-color);
+    border-radius: 50%;
+    transition: all .2s;
+}
+input:checked + label .new-checkbox{
+    background-color: var(--main-color);
+}
+input:checked + label .new-checkbox::after{
+   left:5px;
+   background-image: var(--GrayishBlue-color);
+}
+.cards{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+.card{
+    background-color: white;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem 2rem;
+    width: 33.333%;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 768px){
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        width: 75%;
+        margin: auto;
+    }
+}
+.card h4{
+    color: var(--GrayishBlue-color);
+}
+.card h2{
+    color: var(--Dark-GrayishBlue-color);
+    font-size: 4rem;
+}
+.card ul li{
+    color: var(--GrayishBlue-color);
+    font-weight: 700;
+    border-top: 1px solid var(--very-LightGrayishBlue-color);
+    padding: 1.2rem 0;
+    font-size: 15px;
+}
+.card ul li a{
+    text-decoration: none;
+    color: white;
+    background-image: var(--Linear-Gradient);
+    border: 1px solid var(--main-color);
+    display: block;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.card ul li a:hover{
+    background-image: linear-gradient(white,white);
+    color: var(--main-color);
+    border: 1px solid var(--GrayishBlue-color);
+}
+.card.active{
+    background-image: var(--Linear-Gradient);
+    color: white;
+    transform: translateY(-15px);
+}
+.card.active h2,.card.active h4,.card.active ul li{
+    color: white;
+}
+.card.active ul li a{
+    background-image: linear-gradient(white,white);
+    color: var(--main-color);
+}
+.card.active ul li a:hover{
+    background-image: linear-gradient(transparent,transparent);
+    color: white;
+    border: 1px solid white;
+}
+.hidden{
+    display: none;
+}

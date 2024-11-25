@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <img src="./images/bg-top.svg" class="bg-top bg">
+  <img src="./images/bg-bottom.svg" class="bg-bottom bg">
+  <div class="container">
+    <div class="header">
+      <h2>Our Pricing</h2>
+      <div class="price-header">
+        <span>Annually</span>
+            <div class="new-form">
+              <input type="checkbox" class="checkbox_input" id="check">
+              <label for="check">
+                <span class="new-checkbox"></span>
+              </label>
+            </div>
+        <span>Monthly</span>
+
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card c-1">
+          <h4>Basic</h4>
+          <h2 data-month="19.99" data-annual="199.99">&dollar;19.99</h2>
+          <ul>
+            <li>500 GB Storage</li>
+            <li>2 Users Allowed</li>
+            <li>Send up to 3 GB</li>
+            <li>
+              <a href="#">Learn More</a>
+            </li>
+          </ul>
+      </div>
+      <div class="card c-2 active">
+        <h4>Professional</h4>
+        <h2 data-month="29.99" data-annual="249.99">&dollar;24.99</h2>
+        <ul>
+          <li> 1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+          <li>
+            <a href="#">Learn More</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card c-3">
+      <h4>Master</h4>
+      <h2 data-month="39.99" data-annual="399.99">&dollar;39.99</h2>
+      <ul>
+        <li>2 TB Storage</li>
+        <li>10 Users Allowed</li>
+        <li>Send up to 20 GB</li>
+        <li>
+          <a href="#">Learn More</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Ahmed-H-Ismael">A.H.I</a>.
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
